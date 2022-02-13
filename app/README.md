@@ -14,8 +14,20 @@ It is the first project of [The Complete Guide to Fullstack Vue](https://www.new
 ### Stage 1
 
 - `<div id="app">` in index.html
-  - This ID is used to determine where the Vue application will be **mounted**; ie. where it will be inserted into the HTML template.
+
+  - This ID is used to determine where the Vue application will be **mounted**; ie. where it will be inserted into the template.
   - The Vue app will be **mounted** on to this div element.
+  - Vue JavaScript can then be used anywhere within this element (this Div).
+
+- Data Binding
+  - This is the process of synchronising data within our model to the view, so that data is passed in and out correctly.
+  - To do this, we create a Data Object in our Vue Instance.
+  - We then bind the keys in the Data Object to content in the template (eg. the HTML).
+  - We can bind text (eg. in `<p>`, `<h2>` etc) using 'Mustache' syntax: {{ }}.
+  - To bind data in attributes (such as href, alt, id, class, src) we need to use a special attribute called `v-bind`, which is called a **Vue Directive**. The syntax for this is `v-bind:attribute`, eg...
+    ```
+    <img vbind:src="submissions[0].profilePicture.image" vbind:alt="submissions[0].profilePicture.altText">
+    ```
 
 ## New Tools
 
